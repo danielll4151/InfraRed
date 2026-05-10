@@ -1,7 +1,9 @@
 INFRARED - Sistema de Reporte de Infraestructura Vial
+
 Aplicacion web para que ciudadanos de Bogota reporten danos en infraestructura vial, hagan seguimiento en tiempo real al estado de cada reporte, y ubiquen el problema directamente en el mapa de la ciudad.
 
 Que es INFRARED?
+
 INFRARED es una plataforma comunitaria que permite a cualquier ciudadano registrar problemas de infraestructura vial (huecos, fallas en alumbrado, andenes deteriorados, alcantarillas sin tapa) y consultar el estado de su reporte desde cualquier dispositivo.
 El sistema incluye un mapa interactivo de Bogota para geolocalizar reportes, un chatbot de asistencia integrado disponible en toda la aplicacion, y un panel de administracion donde los encargados pueden gestionar cada reporte.
 
@@ -70,25 +72,8 @@ Estilo del mapa: tema oscuro personalizado con tonos azul marino y rojo acento, 
 Stack tecnologico
 TecnologiaVersionUsoNext.js^16.2.2Framework principal (App Router)React19.2.4Componentes y manejo de estadoTypeScript5.xTipado estaticoTailwind CSS4.xEstilos@react-google-maps/api^2.20.8Integracion con Google MapsContext API-Estado global de reportes
 
-Arquitectura del proyecto
-infrared/
-|-- app/
-|   |-- layout.tsx          # Layout global con navbar, footer, Provider y ChatBot
-|   |-- page.tsx            # Pagina de inicio con estadisticas y ultimos reportes
-|   |-- reportar/
-|   |   `-- page.tsx        # Formulario para crear nuevo reporte con mapa
-|   |-- reportes/
-|   |   `-- page.tsx        # Listado de todos los reportes activos
-|   `-- admin/
-|       `-- page.tsx        # Panel de administracion
-|-- components/
-|   |-- ChatBot.tsx         # Chatbot flotante con respuestas predefinidas
-|   `-- Mapa.tsx            # Componente Google Maps con tema oscuro y marcadores
-|-- context/
-|   `-- ReportsContext.js   # Estado global: lista de reportes, addReport, updateEstado
-|-- data/
-|   `-- store.js            # Datos iniciales y mapas de etiquetas/colores
-`-- public/                 # Recursos estaticos
+<img width="778" height="497" alt="image" src="https://github.com/user-attachments/assets/6035a7fd-c729-480a-b64a-aeb4f9d9e30d" />
+
 
 Instalacion y ejecucion local
 Requisitos previos
@@ -98,16 +83,19 @@ npm, yarn, pnpm o bun
 API Key de Google Maps con Maps JavaScript API y Places API habilitadas
 
 Pasos
+
 bash# 1. Clonar el repositorio
 git clone https://github.com/danielll4151/InfraRed.git
 cd InfraRed
 
 # 2. Instalar dependencias
+
 npm install
 
 # 3. Crear archivo de variables de entorno
-# Crear el archivo .env.local en la raiz del proyecto con:
-# NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=tu_api_key_aqui
+
+Crear el archivo .env.local en la raiz del proyecto con:
+ NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=tu_api_key_aqui
 
 # 4. Ejecutar en modo desarrollo
 npm run dev
@@ -130,12 +118,19 @@ npm run start    # Servidor de produccion (requiere build previo)
 npm run lint     # Linter ESLint
 
 Autor
+
 Daniel Romero
+
 Fabian Lopez
+
 Pablo Rodriguez
+
 Daniel Londoño
+
 Estudiantes de Ingenieria de Software - Universidad Manuela Beltran (Bogota, 3 semestre)
+
 GitHub: https://github.com/danielll4151
 
 Contexto academico
+
 Proyecto personal desarrollado como practica de desarrollo web con tecnologias modernas (Next.js App Router, React 19, TypeScript, Google Maps API). Simula un caso de uso real orientado a la gestion ciudadana de infraestructura urbana en Bogota, con enfasis en experiencia de usuario, arquitectura modular y buenas practicas de desarrollo.
